@@ -127,14 +127,17 @@ const TableComponent: React.FC<{ columns: any[]; data: IDataItem[] }> = ({ colum
             </button>
             {getVisiblePages().map((pageNumber) => (
               <button
-                key={pageNumber}
-                onClick={() => handlePageChange(pageNumber)}
-                className={`px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm mr-2 ${
-                  pageNumber === selectedPage ? 'bg-black text-white font-bold' : ''
-                }`}
-              >
-                {pageNumber + 1}
-              </button>
+              key={pageNumber}
+              onClick={() => handlePageChange(pageNumber)}
+              className={`px-4 py-2 text-sm font-medium ${
+                pageNumber === selectedPage
+                  ? 'bg-black text-white font-bold'
+                  : 'text-gray-700 bg-white border border-gray-300'
+              } rounded-md shadow-sm mr-2`}
+            >
+              {pageNumber + 1}
+            </button>
+            
             ))}
             <button
               onClick={() => handlePageChange(pageIndex + 1)}

@@ -1,6 +1,7 @@
 import React from 'react';
 import TableComponent from './Components/TableComponent';
 import generateRandomUserData from './Utilites/generateRandomUserData';
+import ModalComponent from './Components/ModalComponent';
 
 const App: React.FC = () => {
   const columns = [
@@ -14,7 +15,10 @@ const App: React.FC = () => {
 
   const randomUserData = generateRandomUserData(200);
   console.log(randomUserData);
-  return <TableComponent columns={columns} data={randomUserData} />;
+  return <>
+  <TableComponent columns={columns} data={randomUserData} />
+  <ModalComponent columns={columns} data={randomUserData} />
+  </>;
 };
 
 export default App;
