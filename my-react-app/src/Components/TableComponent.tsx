@@ -58,7 +58,7 @@ const TableComponent: React.FC<{ columns: any[]; data: IDataItem[] }> = ({ colum
   };
 
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center h-auto">
       <div className="overflow-x-auto">
         <table {...getTableProps()} className="min-w-full divide-y divide-gray-200">
           <thead className="bg-gray-50">

@@ -2,6 +2,7 @@ import React from 'react';
 import TableComponent from './Components/TableComponent';
 import generateRandomUserData from './Utilites/generateRandomUserData';
 import ModalComponent from './Components/ModalComponent';
+import DropDownMenuComponent from './Components/DropDownMenuComponent';
 
 const App: React.FC = () => {
   const columns = [
@@ -16,6 +17,7 @@ const App: React.FC = () => {
   const randomUserData = generateRandomUserData(200);
   console.log(randomUserData);
   return <>
+  <DropDownMenuComponent columns={columns} data={randomUserData} />
   <TableComponent columns={columns} data={randomUserData} />
   <ModalComponent columns={columns} data={randomUserData} />
   </>;
